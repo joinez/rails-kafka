@@ -1,0 +1,8 @@
+**/.git*
+**/Dockerfile*
+**/docker-compose*
+**/logs
+**/log
+**/tmp
+**/test_results
+**/pids/server.pid
