@@ -4,6 +4,7 @@ LABEL maintainer="Team Neuland"
 
 ENV PACKAGES \
   build-base \
+  nodejs \
   postgresql-dev \
   tzdata
 
