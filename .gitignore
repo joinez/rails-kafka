@@ -21,7 +21,6 @@
 **/config/master.key
 
 # Ignore Postgres files
-**/database.yml
 **/schema.rb
 
 .DS_Store
