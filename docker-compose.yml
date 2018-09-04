@@ -4,6 +4,8 @@ services:
   app:
     build: .
     container_name: rails-app
+    tty: true
+    stdin_open: true
     environment:
       POSTGRES_USER: rails
       POSTGRES_PASSWORD: rails
