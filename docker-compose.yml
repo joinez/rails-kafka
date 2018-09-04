@@ -39,6 +39,16 @@ services:
       - 9092:9092
     volumes:
       - /var/run/docker.sock:/var/run/docker.sock
+  registry:
+    image: confluentinc/cp-schema-registry:5.0.0
+    container_name: registry
+    depends_on:
+      - kafka
+      - zookeeper
+    environment:
+      SCHEMA_REGISTRY_KAFKASTORE_CONNECTION_URL: zookeeper:2181
+      SCHEMA_REGISTRY_HOST_NAME: schema-registry
+      SCHEMA_REGISTRY_LISTENERS: http://0.0.0.0:8081
   control-center:
     image: confluentinc/cp-enterprise-control-center:5.0.0
     container_name: control-center
