@@ -67,8 +67,8 @@ services:
     depends_on:
       - kafka
       - zookeeper
-    volumes:
-      - /tmp/control-center/data:/var/lib/confluent-control-center
+    # volumes:
+    #   - /tmp/control-center/data:/var/lib/confluent-control-center
     ulimits:
       nofile:
         soft: 16384
