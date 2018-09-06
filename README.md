@@ -30,3 +30,8 @@ Consume messages with console consumer:
 ```
 docker container exec kafka kafka-console-consumer --bootstrap-server kafka:9092 --topic foo --from-beginning --max-messages 42
 ```
+Produce events from rails app:
+```
+docker-compose up -d
+```
+Visiting 'localhost:3000' produces an event in the topic "page_visits" in kafka
