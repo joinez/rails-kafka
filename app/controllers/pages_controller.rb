@@ -9,4 +9,7 @@ class PagesController < ApplicationController
     }
     $kafka_producer.produce(event.to_json, topic: "page_visits")
   end
+
+  def messages
+  end
 end

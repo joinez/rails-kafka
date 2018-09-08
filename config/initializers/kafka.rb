@@ -9,3 +9,11 @@ $kafka_producer = $kafka.async_producer(
 )
 
 at_exit { $kafka_producer.shutdown }
+
+# $kafka_consumer = $kafka.consumer(group_id: "my-consumer")
+# $kafka_consumer.subscribe("page_visits")
+# trap("TERM") { $kafka_consumer.stop }
+
+# $kafka_consumer.each_message do |message|
+#   Rails.logger.info message
+# end
